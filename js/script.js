@@ -5,11 +5,11 @@ import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import DropdownMenu from './modules/dropdown.js';
 import MenuMobile from './modules/menumobile.js';
-
-import initHorario from './modules/horario.js';
+import Horario from './modules/horario.js';
 import fetchAnimais from './modules/fetchanimais.js';
 import fetchBit from './modules/fetchbit.js';
 import ScrollAnima from './modules/scroll-anima.js';
+
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -35,6 +35,8 @@ dropdownmenu.init();
 const menumobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menumobile.init();
 
-initHorario();
+const horario = new Horario('[data-semana]');
+horario.init();
+
 fetchAnimais('../../animais.json', '.numeros-grid');
 fetchBit('https://blockchain.info/ticker', '.btc-preco');
