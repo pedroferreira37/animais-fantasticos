@@ -9,7 +9,7 @@ import Horario from './modules/horario.js';
 import fetchAnimais from './modules/fetchanimais.js';
 import fetchBit from './modules/fetchbit.js';
 import ScrollAnima from './modules/scroll-anima.js';
-
+import SlideNav from './modules/slide.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -40,3 +40,7 @@ horario.init();
 
 fetchAnimais('../../animais.json', '.numeros-grid');
 fetchBit('https://blockchain.info/ticker', '.btc-preco');
+
+const slide = new SlideNav('.slide', '.wrapper');
+slide.init();
+slide.addControl('.custom-control');
